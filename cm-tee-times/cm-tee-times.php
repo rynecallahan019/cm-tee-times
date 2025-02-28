@@ -3,7 +3,7 @@
 Plugin Name: Fair Score
 Plugin URI: https://github.com/rynecallahan019/cm-tee-times
 Description: A plugin for booking golf course tee times with flexible management options.
-Version: 2.0.0
+Version: 2.1.0
 Author: Callahan Media
 Author URI: http://calmc.net/
 * License: GPL-2.0+
