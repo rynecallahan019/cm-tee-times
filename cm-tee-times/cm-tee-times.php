@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: CM Tee Times
+Plugin Name: Fair Score
 Plugin URI: https://github.com/rynecallahan019/cm-tee-times
 Description: A plugin for booking golf course tee times with flexible management options.
-Version: v1.0.1
+Version: 1.0.0
 Author: Callahan Media
 Author URI: http://calmc.net/
 * License: GPL-2.0+
@@ -83,3 +83,20 @@ function cm_load_plugin_template($template) {
     return $template;
 }
 add_filter('template_include', 'cm_load_plugin_template');
+
+
+require 'plugin-update-checker-master/plugin-update-checker.php';
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/rynecallahan019/cm-tee-times/', // GitHub repository URL
+    __FILE__, // Full path to the main plugin file
+    'your-plugin-slug' // Plugin slug (usually the folder name)
+);
+
+// Optional: Set branch to check updates from (default is "main" or "master")
+$myUpdateChecker->setBranch('main');
+
+// Optional: Set authentication if your repo is private (replace with GitHub token)
+// $myUpdateChecker->setAuthentication('your_github_personal_access_token');
