@@ -1,11 +1,13 @@
 <?php
 /*
-Plugin Name: Fair Score
-Plugin URI: http://calmc.net/
+Plugin Name: CM Tee Times
+Plugin URI: https://github.com/rynecallahan019/cm-tee-times
 Description: A plugin for booking golf course tee times with flexible management options.
-Version: 3.2
+Version: 1.0.0
 Author: Callahan Media
 Author URI: http://calmc.net/
+* License: GPL-2.0+
+* License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
 // Prevent direct access
