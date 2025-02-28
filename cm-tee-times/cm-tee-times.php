@@ -3,7 +3,7 @@
 Plugin Name: CM Tee Times
 Plugin URI: https://github.com/rynecallahan019/cm-tee-times
 Description: A plugin for booking golf course tee times with flexible management options.
-Version: 1.0.1
+Version: v1.0.1
 Author: Callahan Media
 Author URI: http://calmc.net/
 * License: GPL-2.0+
