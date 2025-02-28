@@ -90,7 +90,7 @@ require 'plugin-update-checker-master/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-    'https://github.com/rynecallahan019/cm-tee-times/', // GitHub repository URL
+    'https://github.com/rynecallahan019/cm-tee-times/archive/refs/tags/v2.1.0.zip', // GitHub repository URL
     __FILE__, // Full path to the main plugin file
     'your-plugin-slug' // Plugin slug (usually the folder name)
 );
