@@ -1,0 +1,330 @@
+/* Admin Settings Page Styles */
+.fs-settings-container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.fs-setting-section {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.theme-preview-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.theme-option {
+    flex: 1;
+}
+
+.theme-preview {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.theme-preview:hover {
+    transform: translateY(-5px);
+}
+
+.preview-header {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.preview-content {
+    height: 200px;
+}
+
+.light-preview {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.dark-preview {
+    background: #1a1a1a;
+    color: white;
+}
+
+.instructions-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* Frontend Booking Form Styles */
+.fair-score-booking {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Light Theme */
+.theme-light {
+    --fs-bg-primary: #ffffff;
+    --fs-bg-secondary: #f8f9fa;
+    --fs-text-primary: #333333;
+    --fs-text-secondary: #666666;
+    --fs-border: #e1e4e8;
+    --fs-accent: #2563eb;
+    --fs-accent-hover: #1d4ed8;
+    --fs-card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark Theme */
+.theme-dark {
+    --fs-bg-primary: #1a1a1a;
+    --fs-bg-secondary: #2d2d2d;
+    --fs-text-primary: #ffffff;
+    --fs-text-secondary: #a0a0a0;
+    --fs-border: #404040;
+    --fs-accent: #3b82f6;
+    --fs-accent-hover: #60a5fa;
+    --fs-card-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.fair-score-booking {
+    background: var(--fs-bg-primary);
+    color: var(--fs-text-primary);
+}
+
+.booking-form h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.course-card {
+    background: var(--fs-bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--fs-card-shadow);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.course-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover !important;
+}
+
+.course-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-info h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: var(--fs-text-primary);
+}
+
+.course-excerpt {
+    color: var(--fs-text-secondary);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    font-size: 15px;
+}
+
+.course-select {
+    display: block;
+}
+
+.course-select input[type="radio"] {
+    display: none;
+}
+
+.select-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 24px;
+    background: var(--fs-bg-primary);
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 16px;
+}
+
+.select-button:hover {
+    background: var(--fs-accent-hover);
+    color: #ffffff;
+    border: 1px solid var(--fs-accent-hover);
+}
+
+
+.course-select input[type="radio"]:checked + .select-button {
+    background: green !important;
+    color: #ffffff;
+    border: 1px solid green;
+    box-shadow: 0 0 0 2px green;
+}
+
+.fs-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+    padding: 15px 30px;
+    background: var(--fs-accent);
+    color: white;
+    border: none !important;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 1000;
+    outline: none;
+    overflow: hidden; /* Ensures pseudo-element stays inside */
+}
+
+.fs-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Place behind the button content */
+}
+
+
+.fs-button:hover, .fs-button:active, .fs-button:focus {
+    background: var(--fs-accent-hover);
+    transform: translateX(-50%) translateY(-2px);
+    border: none !important;
+    outline: none !important;
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-form h2 {
+        font-size: 22px;
+    }
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.time-slot-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+
+}
+
+.time-slot-card .available-spots {
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.time-slot-card .time-slot-time {
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.time-slot-card .time-slot-date {
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.time-slot-card input[type="radio"]:checked + .select-button {
+    background: green !important;
+    color: #ffffff;
+    border: 1px solid green;
+    box-shadow: 0 0 0 2px green;
+}
+
+.time-slot-select input[type="radio"] {
+    display: none;
+}
+
+.fair-score-booking .form-group label {
+    font-size: 18px;
+}
+
+.fair-score-booking .form-group select {
+    border-radius: 6px !important;
+    padding: 15px !important;
+    outline: none !important;
+    border: solid 1px #ddd;
+    font-size: 18px !important;
+}
+
+.fair-score-booking .form-group input, 
+.fair-score-booking input:not([type=submit]), 
+.fair-score-booking select, 
+.fair-score-booking textarea {
+    padding: 10px !important;
+    font-size: 18px !important;
+}
+
+
+.plugin-page-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background: #fff; /* Light background */
+}
+
+.plugin-page-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.plugin-shortcode-wrapper {
+    width: 100%;
+}
